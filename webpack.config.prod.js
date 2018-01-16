@@ -34,7 +34,7 @@ const webpackConfig = {
         }),
       },
       {
-        test: /\.(jpe?g|png|gif|svg|jpg)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           'url-loader?limit=10000',
           'img-loader'
@@ -46,10 +46,6 @@ const webpackConfig = {
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: 'style.css',
-      allChunks: true,
-    }),
     new HtmlWebpackPlugin({
       template: './client/index.html',
       filename: 'index.html',
