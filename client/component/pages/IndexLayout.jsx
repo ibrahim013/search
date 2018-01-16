@@ -3,7 +3,7 @@ import Slug from "../pages/Slug";
 import HomePage from "../pages/HomePage";
 import logo from "../../aserts/logo.jpg";
 import Categories from "../pages/Categories";
-import Footer from "../pages/Footer";
+import Menue from "../pages/Menue";
 
 const IndexLayout = () => (
   <div className="ui fluid container">
@@ -14,9 +14,6 @@ const IndexLayout = () => (
       <HomePage />
       <Slug />
       <Categories />
-    </div>
-    <div className="index-footer">
-      <Footer />
     </div>
   </div>
 );

@@ -1,3 +1,6 @@
+body{
+  height:100%;
+}
 a {
   text-decoration: none;
   color: #2e2a65;
@@ -13,9 +16,10 @@ hr {
   height: 53px;
 }
 .sk-hits-grid-hit {
-  width: 250px;
   margin: 0 0.5% 0.9% 0;
-  height: 370px;
+  max-width: 24%;
+  flex: 25% 0 0 ;
+  height: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .sk-hits-grid-hit__title {
@@ -39,16 +43,14 @@ hr {
 .toplevel > img {
   width: 80%;
 }
-.videoback {
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0.3;
+.search-contanier{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+width: 50%;
+margin: 0.2rem auto;
+
 }
 .sk-layout__body,
 .sk-layout__top-bar {
-  position: absolute;
-  margin-top: 20%;
   width: 50%;
   margin-left: 26%;
 }
@@ -56,12 +58,11 @@ hr {
   width: 100%;
 }
 .slug {
-  position: absolute;
-  top: 45%;
-  left: 25%;
+  margin: 1% 25%;
 }
 .slug > img {
   width: 70%;
+  margin-left: 15%;
 }
 .cat-data {
   list-style: none;
@@ -114,6 +115,7 @@ hr {
   border-bottom: 3px solid #fafafa;
   color: #000000;
 }
+
 .result-sta {
   position: absolute;
   margin-top: 2%;
@@ -121,10 +123,8 @@ hr {
 }
 .result {
   margin-top: 5%;
+  min-height: 100vh;
 }
-/* .terms {
-  width: 50%;
-} */
 .text-edit {
   width: 90%;
   margin-bottom: 2%;
@@ -141,4 +141,8 @@ hr {
 
 .pagination{
   margin: 3% 0 4% 0;
+}
+
+#image-view{
+  width:100%
 }

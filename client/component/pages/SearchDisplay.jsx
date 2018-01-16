@@ -6,14 +6,18 @@ import {
   ActionBarRow,
   HitsStats,
   SearchBox,
-  Pagination
+  Pagination,
 } from "searchkit";
-import Footer from "../pages/Footer";
 import logo from "../../aserts/logo.jpg";
 
 import DisplayList from "../pages/DisplayList";
 
-const searchkit = new SearchkitManager("http://localhost:9200/pricetable");
+const searchkit = new SearchkitManager(
+  "https://ash-8817730.us-east-1.bonsaisearch.net/pricetable",
+  {
+    basicAuth: "439h1n43dz:xnv4ee15tv"
+  }
+);
 const HomePage = () => (
   <SearchkitProvider searchkit={searchkit}>
     <div className="ui fluid container">
@@ -45,7 +49,7 @@ const HomePage = () => (
         </ActionBarRow>
         <div className="result">
           <ViewSwitcherHits
-            hitsPerPage={10}
+            hitsPerPage={100}
             highlightFields={["title", "price", "site"]}
             sourceFilter={[
               "title",
@@ -67,9 +71,6 @@ const HomePage = () => (
           />
           <div className="pagination">
             <Pagination showNumbers />
-          </div>
-          <div className="terms-footer">
-            <Footer />
           </div>
         </div>
       </div>

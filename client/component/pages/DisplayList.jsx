@@ -8,9 +8,11 @@ const DisplayList = props => {
     <div
       className={bemBlocks.item().mix(bemBlocks.container("item"))}
       data-qa="hit"
+      id="datacontainer"
     >
-      <div className={bemBlocks.item("imageUrl")}>
+      <div className={bemBlocks.item("imageUrl")} id="image-view">
         <img
+          width={"100%"}
           alt="productimage"
           data-qa="imageUrl"
           src={result._source.imageUrl}
