@@ -5,22 +5,33 @@ import {
   ViewSwitcherHits,
   ActionBarRow,
   HitsStats,
+  HierarchicalMenuFilter,
+  RefinementListFilter,
   SearchBox,
   Pagination,
+  SideBar,
+  CheckboxFilter,
+  TermQuery
 } from "searchkit";
 import logo from "../../aserts/logo.jpg";
 
 import DisplayList from "../pages/DisplayList";
+import Filter from "../pages/Filter";
 
 const searchkit = new SearchkitManager(
-  "https://ash-8817730.us-east-1.bonsaisearch.net/testdata",
-  {
-    basicAuth: "439h1n43dz:xnv4ee15tv"
-  }
-);
+  process.env.CLUSTER_URL,
+    {
+      basicAuth: process.env.BASIC_AUTH
+    }
+  );
+  const InitialLoaderComponent = () => (
+    <div>
+      Loading please wait...
+    </div>
+  )
 const HomePage = () => (
   <SearchkitProvider searchkit={searchkit}>
-    <div className="ui fluid container">
+    <div className="container">
       <div className="result-header">
         <div className="logo-holder side">
           <img alt="logo" src={logo} />
@@ -30,7 +41,7 @@ const HomePage = () => (
             <SearchBox
               searchOnChange
               queryOptions={{ analyzer: "standard" }}
-              queryFields={["title", "type"]}
+              queryFields={["title", "type", "brand"]}
               placeholder="Search Product or Categories"
               autofocus
             />
@@ -48,29 +59,36 @@ const HomePage = () => (
           </div>
         </ActionBarRow>
         <div className="result">
-          <ViewSwitcherHits
-            hitsPerPage={100}
-            highlightFields={["title", "price", "site"]}
-            sourceFilter={[
-              "title",
-              "imageUrl",
-              "price",
-              "url",
-              "site",
-              "categories"
-            ]}
-            hitComponents={[
-              {
-                key: "grid",
-                title: "Grid",
-                itemComponent: DisplayList,
-                defaultOption: true
-              }
-            ]}
-            scrollTo="body"
-          />
-          <div className="pagination">
-            <Pagination showNumbers />
+        <SideBar>
+          <Filter />
+        </SideBar>
+          <div>
+            <ViewSwitcherHits
+              hitsPerPage={100}
+              highlightFields={["title", "price", "type", "brand"]}
+              sourceFilter={[
+                "title",
+                "imageUrl",
+                "price",
+                "url",
+                "site",
+                "type",
+                "brand",
+              ]}
+              hitComponents={[
+                {
+                  key: "grid",
+                  title: "Grid",
+                  itemComponent: DisplayList,
+                  defaultOption: true
+                }
+              ]}
+              scrollTo="body"
+            />
+      
+            <div className="pagination">
+              <Pagination showNumbers />
+            </div> 
           </div>
         </div>
       </div>

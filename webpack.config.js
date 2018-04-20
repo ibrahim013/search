@@ -1,8 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
+const dotEnv = require("dotenv");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const parseVariables = dotEnv.config().parsed;
+const environmentVariables = {};
+
+for (let envVar in parseVariables) {
+  environmentVariables[envVar] = JSON.stringify(parseVariables[envVar]);
+}
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: 'client/index.html',
   filename: 'index.html',
@@ -75,6 +82,11 @@ const webpackConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     HtmlWebpackPluginConfig,
+    new webpack.DefinePlugin({
+      "process.env": {
+        ...environmentVariables
+      }
+    })
   ],
 };
 

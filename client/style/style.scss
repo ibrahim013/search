@@ -1,12 +1,38 @@
 
-.container{
+.container {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  .midlevel{
+  .midlevel {
     flex: 1;
   }
-  .cat{
+  .result-header{
+    display:flex;
+    align-items: center;
+  }
+  .logo-holder {
+    width:10%;
+    margin: 1rem 2% 1.5rem 1.5rem;
+    img{
+      width:100%;
+    }
+  }
+  .result-sta{
+    margin: 1.5rem;
+    .sk-hits-stats__info {
+      font-size: 18px;
+      color: green;
+    }
+  }
+  .aside{
+    border: solid 2px red;
+    min-width: 20%;
+  }
+  .searchresult{
+    margin-top: 0.85rem;
+    width: 45%;
+  }
+  .cat {
     width: 71.6%;
     margin: 1rem auto;
     .ui.cards{
@@ -26,17 +52,27 @@
       background-color: #ffffff;
       height: 53px;
     }
-
+    .result{
+      display: flex;
+    }
     .sk-hits-grid-hit {
       margin: 0 0.5% 0.9% 0;
       max-width: 24%;
-      flex: 25% 0 0 ;
-      height: 450px;
+      flex: 24% 0 0;
+      height: 400px;
+    }
+    .sk-hits-grid-hit:hover{
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-
+    .sk-hits-grid-hit__brand {
+      border-bottom: solid 2px green;
+      width: 100%;
+      font-size: 0.93rem;
+    }
     .sk-hits-grid-hit__title {
       min-height: 70px;
+      font-size: 13px;
+      color: black;
     }
 
     .price {
@@ -103,6 +139,12 @@
   .container {
     .toplevel {
       top: 60px;
+    }
+    .logo-holder{
+      width: 25%;
+    }
+    .searchresult{
+      margin-top: 0.05rem;
     }
     .search-contanier {
       width: 80%

@@ -18,11 +18,16 @@ const DisplayList = props => {
           src={result._source.imageUrl}
         />
       </div>
+      <div className={bemBlocks.item("brand")}>
+        <p>
+          {result._source.brand}
+        </p>
+      </div>
       <a href={result._source.url} target="_blank">
         <div
-          data-qa="categories"
+          data-qa="title"
           className={bemBlocks.item("title")}
-          dangerouslySetInnerHTML={{ __html: source.title }}
+          dangerouslySetInnerHTML={{ __html: source.title.slice(0, 50) + "..." }}
         />
       </a>
       <div className={bemBlocks.item("price")}>
