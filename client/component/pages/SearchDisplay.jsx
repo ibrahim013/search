@@ -13,11 +13,11 @@ import logo from "../../aserts/logo.jpg";
 import DisplayList from "../pages/DisplayList";
 
 const searchkit = new SearchkitManager(
-  "https://ash-8817730.us-east-1.bonsaisearch.net/testdata",
-  {
-    basicAuth: "439h1n43dz:xnv4ee15tv"
-  }
-);
+  process.env.CLUSTER_URL,
+    {
+      basicAuth: process.env.BASIC_AUTH
+    }
+  );
 const HomePage = () => (
   <SearchkitProvider searchkit={searchkit}>
     <div className="ui fluid container">
