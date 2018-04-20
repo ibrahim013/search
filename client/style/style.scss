@@ -1,0 +1,117 @@
+
+.container{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  .midlevel{
+    flex: 1;
+  }
+  .cat{
+    width: 71.6%;
+    margin: 1rem auto;
+    .ui.cards{
+      margin: 0;
+    }
+  }
+    a {
+      text-decoration: none;
+      color: #2e2a65;
+    }
+
+    .bsk-search-box__textox {
+      border: soild 2px red;
+    }
+
+    .sk-layout__top-bar {
+      background-color: #ffffff;
+      height: 53px;
+    }
+
+    .sk-hits-grid-hit {
+      margin: 0 0.5% 0.9% 0;
+      max-width: 24%;
+      flex: 25% 0 0 ;
+      height: 450px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .sk-hits-grid-hit__title {
+      min-height: 70px;
+    }
+
+    .price {
+      color: red;
+    }
+
+    .sk-search-box input.sk-search-box__text {
+      background: #fafafa;
+      color: #0a0909;
+      background: transparent;
+    }
+
+  .toplevel {
+    width: 35%;
+    position: relative;
+    top:5rem;
+    margin:0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+  .search-contanier{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50%;
+    position: relative;
+    margin:5rem auto;
+    margin-bottom: 0px;
+  }
+  .sk-layout__body,
+  .sk-layout__top-bar {
+    width: 50%;
+    margin-left: 26%;
+  }
+  .sk-top-bar__content {
+    div {
+      width: 100%;
+    }
+  }
+  .slug{
+    h3 { 
+      font-weight: bold;
+      font-size: 1.95rem;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 1.3rem;
+    }
+  }
+  .footer{
+    background-color: #E0E0E0;
+    display: flex;
+    ul{ 
+      li{
+       list-style: none;
+       display: inline-flex;
+       padding-right: 0.95rem;
+      }
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 560px){
+  .container {
+    .toplevel {
+      top: 60px;
+    }
+    .search-contanier {
+      width: 80%
+    }
+    .slug{
+      h3 { 
+        font-size: 1rem;
+        margin-top: 1.3rem;
+      }
+    }
+  }
+}

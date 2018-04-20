@@ -11,7 +11,7 @@ class Categories extends React.Component {
   render() {
     const { Data } = this.state;
     const categories = Data.map(data => (
-      <div className="ui card raised">
+      <div className="ui card raised" key={data}>
         <div className="ui content">{data}</div>
       </div>
     ));

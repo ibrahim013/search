@@ -12,7 +12,7 @@ class SearchPage extends SearchkitComponent {
         <div>
           <SearchBox
             queryOptions={{ analyzer: "standard" }}
-            queryFields={["title", "text"]}
+            queryFields={["title", "type"]}
             placeholder="Search Product or Categories"
             searchOnChange={false}
             autofocus

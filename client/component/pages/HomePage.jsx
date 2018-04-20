@@ -2,7 +2,7 @@ import React from "react";
 import { SearchkitManager, SearchkitProvider } from "searchkit";
 import SearchPage from "../pages/SearchPage";
 
-const searchkit = new SearchkitManager("https://ash-8817730.us-east-1.bonsaisearch.net/pricetable",{
+const searchkit = new SearchkitManager("https://ash-8817730.us-east-1.bonsaisearch.net/testdata",{
   basicAuth:"read:teetndhjnrspbzxxyfxmf5fb24suqxuj"
 })
 ;

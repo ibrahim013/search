@@ -13,7 +13,7 @@ import logo from "../../aserts/logo.jpg";
 import DisplayList from "../pages/DisplayList";
 
 const searchkit = new SearchkitManager(
-  "https://ash-8817730.us-east-1.bonsaisearch.net/pricetable",
+  "https://ash-8817730.us-east-1.bonsaisearch.net/testdata",
   {
     basicAuth: "439h1n43dz:xnv4ee15tv"
   }
@@ -30,7 +30,7 @@ const HomePage = () => (
             <SearchBox
               searchOnChange
               queryOptions={{ analyzer: "standard" }}
-              queryFields={["title", "text"]}
+              queryFields={["title", "type"]}
               placeholder="Search Product or Categories"
               autofocus
             />
