@@ -1,6 +1,7 @@
 import React from "react";
 import extend from "lodash/extend";
 
+const numeral = require('numeral')
 const DisplayList = props => {
   const { bemBlocks, result } = props;
   const source = extend({}, result._source, result.highlight);
@@ -35,12 +36,12 @@ const DisplayList = props => {
           <span>
             <del>N</del>
           </span>
-          {result._source.price}
+          {numeral(result._source.price).format("0,0")}
         </strong>
       </div>
       <div className={bemBlocks.item("site")}>
         <p>
-          <span>Found on </span>
+          <span>Seller</span>
           {result._source.site}
         </p>
       </div>

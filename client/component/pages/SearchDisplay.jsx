@@ -17,6 +17,7 @@ import logo from "../../aserts/logo.jpg";
 
 import DisplayList from "../pages/DisplayList";
 import Filter from "../pages/Filter";
+import SelectedFilter from "../pages/SelectedFilter"
 
 const searchkit = new SearchkitManager(
   process.env.CLUSTER_URL,
@@ -57,12 +58,13 @@ const HomePage = () => (
               }}
             />
           </div>
+          <SelectedFilter/>
         </ActionBarRow>
         <div className="result">
         <SideBar>
           <Filter />
         </SideBar>
-          <div>
+          <div className="hitvalue">
             <ViewSwitcherHits
               hitsPerPage={100}
               highlightFields={["title", "price", "type", "brand"]}

@@ -13,7 +13,7 @@ import {
             <RefinementListFilter id="brand" title="Brand" field="brand.raw" operator="AND" />
         </div>
         <div>
-            <RefinementListFilter id="site" title="Found on" field="site.raw" operator="AND" />
+            <RefinementListFilter id="site" title="Seller" field="site.raw" operator="AND" />
         </div>
     </div>
       )
