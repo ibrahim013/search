@@ -16,6 +16,7 @@ const DisplayList = props => {
           width={"100%"}
           alt="productimage"
           data-qa="imageUrl"
+          // onerror="this.src='default-image.jpg'"
           src={result._source.imageUrl}
         />
       </div>

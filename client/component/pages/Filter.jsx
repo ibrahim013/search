@@ -10,6 +10,9 @@ import {
      return (
     <div>
         <div>
+            <RefinementListFilter id="type" title="Type" field="type.raw" operator="AND" />
+        </div>
+        <div>
             <RefinementListFilter id="brand" title="Brand" field="brand.raw" operator="AND" />
         </div>
         <div>

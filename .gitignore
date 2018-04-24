@@ -13,7 +13,7 @@ public
 .env.development.local
 .env.test.local
 .env.production.local
-
+.env
 npm-debug.log.1399459590
 npm-debug.log*
 yarn-debug.log*

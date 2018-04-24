@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "price search made easy",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.4"
+  },
   "scripts": {
     "postinstall": "npm run build",
     "start": "babel-node server/index.js",

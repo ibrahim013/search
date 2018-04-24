@@ -20,6 +20,7 @@
       width:100%;
     }
   }
+
   .result-sta{
     margin: 0.7rem;
     margin-right: 5rem;
@@ -80,7 +81,11 @@
     .sk-action-bar-row{
       margin: 0.5rem 0 0 0.5rem;
     }
-
+    .sk-hits-grid-hit__imageUrl{
+      img{
+        max-height: 180px;
+      }
+    }
     .price {
       color: red;
     }
@@ -144,7 +149,17 @@
   }
   
 }
-
+.error-main {
+  text-align: center;
+ h1 {
+   font-size:18rem;
+   color: #1c87cd;
+   font-weight: bold;
+  }
+  p{
+    font-size: 3rem;
+  }
+ }
 @media only screen and (max-width: 560px){
   .container {
     .toplevel {
